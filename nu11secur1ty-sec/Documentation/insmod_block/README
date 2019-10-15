@@ -1,0 +1,151 @@
+# nu11secur1ty
+=================================================================================================
+This is an LSM module created by nu11secur1ty to create a data string in the virtual /proc/ directory 
+of the kernel using the file, the point of this module is to give an one special string, 
+which will be used from some application from userspace to protected the Kernel from insmod rootkit attacks. 
+The architecture of this module is strong and useful, 
+because he is created without breaking the rule of the User and Kernel space!
+
+---------------------------------------------------------------------------
+# Installing and deploying with new kernel headers.
+
+1. Copy all content from nu11secur1ty-sec to your Kernel tree into the security directory!
+2. make menuconfig, to choose your options
+3. make help, to see what option you have it.
+
+----------------------------------------------------------------------------
+- Bash history:
+
+   79  2019-10-11 10:40:18 wget http://ftp.funet.fi/pub/linux/kernel/v5.x/linux-5.3.5.tar.xz
+   80  2019-10-11 10:46:11 ls
+   81  2019-10-11 10:46:19 tar -xvf linux-5.3.5.tar.xz 
+   82  2019-10-11 10:46:36 ls
+   83  2019-10-11 10:46:54 cp -avr Linux_hardening_and_security/Kernel-sec-modules_by_nu11secur1ty/Modules/LSM/nu11secur1ty-sec/* linux-5.3.5/security/
+   84  2019-10-11 10:46:56 cd linux-5.3.5/
+   85  2019-10-11 10:47:01 vim Makefile 
+   86  2019-10-11 10:47:20 cd security/
+   87  2019-10-11 10:47:22 vim Makefile 
+   88  2019-10-11 10:47:36 vim Kconfig
+   89  2019-10-11 10:47:55 cd ..
+   90  2019-10-11 10:48:05 make mrproper
+   91  2019-10-11 10:48:16 make menuconfig
+   92  2019-10-11 10:49:00 make rpm-pkg
+   93  2019-10-11 13:39:44 ls
+   94  2019-10-11 13:40:14 cd
+   95  2019-10-11 13:47:55 lls
+   96  2019-10-11 13:48:00 ls
+   97  2019-10-11 13:48:25 cd /opt/linux-5.3.5/
+   98  2019-10-11 13:48:27 cd ..
+   99  2019-10-11 13:48:33 du -sh linux-5.3.5
+  100  2019-10-11 13:48:40 cd linux-5.3.5/
+  101  2019-10-11 13:49:59 cp /usr/src/packages/BUILD/kernel-5.3.5_nu11secur1ty_lp151.28.20_default/.config .
+  102  2019-10-11 13:51:17 make 0=/usr/src/linux-4.12.14-lp151.28.20 oldconfig
+  103  2019-10-11 13:51:34 rm .config
+  104  2019-10-11 13:51:36 ls
+  105  2019-10-11 13:52:44 make 0=/usr/src/linux-4.12.14-lp151.28.20 modules_prepare
+  106  2019-10-11 13:53:35 rm -rf /usr/src/linux-4.12.14-lp151.28.20/source
+  107  2019-10-11 13:54:24 ls
+  108  2019-10-11 13:54:31 cd
+  109  2019-10-11 13:55:25 cp /usr/src/packages/BUILD/kernel-5.3.5_nu11secur1ty_lp151.28.20_default/Module.symvers /usr/src/linux-4.12.14-lp151.28.20
+  110  2019-10-11 14:06:20 uname -r
+  111  2019-10-11 14:06:31 cat /proc/nu11secur1ty-sec 
+  112  2019-10-11 14:06:37 cat /proc/insmod_block 
+  113  2019-10-11 14:06:43 lsmod 
+  114  2019-10-11 14:06:46 insmod 
+  115  2019-10-11 14:06:59 cd /opt/Linux_hardening_and_security/
+  116  2019-10-11 14:07:01 ls
+  117  2019-10-11 14:07:05 cd Kernel-sec-modules_by_nu11secur1ty/
+
+-----------------------------------------------------------------------------------------------
+
+# Before installing the new kernel and after compiling him:
+
+- Suppose you want to install the kernel header file to /usr/src/linux-headers-4.15.3. The compiled kernel source tree is located 
+
+```bash
+/path/to/compiled/linux-5.x.x/
+```
+1. unpack a clean kernel source tree
+```bash
+tar xvf linux-5.x.x.tar.xz
+cd linux-5.x.x/
+```
+2.  copy you .config file to the directory
+```bash
+cp /path/to/compiled/linux-5.x.x/.config .
+```
+3.  run it and then delete .config file in source directory to get a clean kernel source
+```bash
+make O=/usr/src/linux-headers-5.x.x oldconfig
+rm .config
+```
+4. run the modules_prepare make target
+```bash
+make O=/usr/src/linux-headers-5.x.x modules_prepare
+```
+5.  delete useless things, and copy the necessary things
+```bash
+rm /usr/src/linux-headers-5.x.x/source
+cp /path/to/compiled/linux-5.x.x/Module.symvers /usr/src/linux-headers-5.x.x
+```
+-----------------------------------------------------------------------------------
+Now, the /usr/src/linux-headers-5.x.x directory is able to build the module.
+
+Documentation https://www.kernel.org/doc/Documentation/kbuild/modules.txt tell us modules_prepare
+
+This will make sure the kernel contains the information required. The target exists solely as a simple way to prepare a kernel source tree for building external modules.
+
+`NOTE`: "modules_prepare" will not build Module.symvers even if CONFIG_MODVERSIONS is set; therefore, a full kernel build needs to be executed to make module versioning work.
+
+-----------------------------------------------------------------------------------
+
+rpm -aq | grep kernel
+           - remove all old kernel packages and kernel resources
+     
+zypper remove kernel-devel
+           - remove the development tools + old kernel headers
+           
+# Installing the new kernel
+ - going to your compiling directory
+
+      cd /usr/src/packages/RPMS/x86_64
+ 
+ - Install all packages on that directory
+      
+       rpm -Uvh kernel-5.3.5_nu11secur1ty_lp151.28.20_default-1.x86_64.rpm
+       rpm -Uvh kernel-devel-5.3.5_nu11secur1ty_lp151.28.20_default-1.x86_64.rpm
+       rpm -Uvh kernel-headers-5.3.5_nu11secur1ty_lp151.28.20_default-1.x86_64.rpm
+       
+  - going to your source directory
+  
+      cd cd /usr/src/packages/SRPMS
+      
+  - install the source tree
+   
+       rpm -Uvh kernel-5.3.5_nu11secur1ty_lp151.28.20_default-1.src.rpm
+  
+  - RECOMMENDED: Installing the patch 
+   
+      curl -s https://raw.githubusercontent.com/nu11secur1ty/Linux_hardening_and_security/master/Kernel-sec-modules_by_nu11secur1ty/Secur1ty-Patches-by-nu11secur1ty/insblpatch/insbl_mod_patch.sh | bash 
+   
+  - UNLOAD PATCH MODULE:
+  
+      curl -s https://raw.githubusercontent.com/nu11secur1ty/Linux_hardening_and_security/master/Kernel-sec-modules_by_nu11secur1ty/Secur1ty-Patches-by-nu11secur1ty/insblpatch/unload/uload_insbl_patch.sh | bash      
+      
+  - Prepire for booting of your new sec kernel ;)
+      
+      grub2-mkconfig -o /boot/grub2/grub.cfg
+      telinit 6
+      
+      
+  =========================================================================
+  WARNING: Once you install the patch for the security module insmod_block, you will not load LKM modules anymore! 
+  Of course, this is not forever, if someone wants to unload the patch, 
+  please visit the https://www.nu11secur1ty.com/ page, for more information, 
+  write to me on mail-form for contacts. BR @nu11secur1ty
+  
+  # V.Varbanovski System Administrator - Infrastructure - Architect
+       
+       
+       
+       
