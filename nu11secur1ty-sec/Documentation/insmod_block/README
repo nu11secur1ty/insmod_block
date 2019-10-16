@@ -118,7 +118,7 @@ zypper remove kernel-devel
        
   - going to your source directory
   
-      cd cd /usr/src/packages/SRPMS
+      cd /usr/src/packages/SRPMS
       
   - install the source tree
    
