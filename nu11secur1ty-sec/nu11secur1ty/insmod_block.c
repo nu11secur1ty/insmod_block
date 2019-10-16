@@ -17,7 +17,7 @@
 
 
 MODULE_LICENSE("Dual BSD/GPL");
-MODULE_AUTHOR("V.Varbanovski");
+MODULE_AUTHOR("V.Varbanovski@nu11secur1ty");
 
 static int irq=1;
 module_param(irq,int,0660);
