@@ -139,7 +139,7 @@ zypper remove kernel-devel
       
       
   =========================================================================
-  WARNING: Once you install the patch for the security module insmod_block, you will not load LKM modules anymore! 
+  WARNING: Once you install the patch for the security module insmod_block, you will not be able to load LKM modules anymore! 
   Of course, this is not forever, if someone wants to unload the patch, 
   please visit the https://www.nu11secur1ty.com/ page, for more information, 
   write to me on mail-form for contacts. BR @nu11secur1ty
