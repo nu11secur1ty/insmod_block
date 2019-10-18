@@ -705,4 +705,7 @@ Public License instead of this License.  But first, please read
 ----------------------------------------------------------------------------------
 
 ### Installing:
-- Copy content from (nu11secur1ty-sec/) to your Kernel (security) tree, execute make menuconfig and choice your options!
+- `Copy content from (nu11secur1ty-sec/) to your Kernel (security) tree, execute make menuconfig and choice your options!`
+
+----------------------------------------------------------------------------------
+# BR V.Varbanovski @nu11secur1ty
