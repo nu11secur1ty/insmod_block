@@ -1,8 +1,6 @@
 # insmod_block
 
-```
-          
-           []<>
+```txt
           Linux Kernel security modules by nu11secur1ty         
                    GNU GENERAL PUBLIC LICENSE
                     Version 3, 29 June 2007
