@@ -700,8 +700,7 @@ Public License instead of this License.  But first, please read
 ----------------------------------------------------------------------------------
 
 `openSUSE Leap 15.2 - kerneldev 5.3.7_nu11secur1ty-lp151.28.20-default` - It works
-![]()
-
+![](https://github.com/nu11secur1ty/insmod_block/blob/master/wall/Screenshot%20from%202019-10-18%2011-40-47.png)
 
 
 ----------------------------------------------------------------------------------
