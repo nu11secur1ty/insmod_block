@@ -699,6 +699,12 @@ Public License instead of this License.  But first, please read
 
 ----------------------------------------------------------------------------------
 
+`openSUSE Leap 15.2 - kerneldev 5.3.7_nu11secur1ty-lp151.28.20-default` - It works
+![]()
+
+
+
+----------------------------------------------------------------------------------
 - Source tree:
 
 [Source](https://github.com/nu11secur1ty/linux-5.x.x-nu11secur1ty)
