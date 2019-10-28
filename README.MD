@@ -688,7 +688,7 @@ Public License instead of this License.  But first, please read
 -----------------------------------------------------------------------------------
 
 `OpenSUSE Leap 42.3` - `kernel linux-4.19.80`
-[](https://github.com/nu11secur1ty/insmod_block/blob/master/wall/Screenshot%20from%202019-10-28%2019-25-54.png)
+![](https://github.com/nu11secur1ty/insmod_block/blob/master/wall/Screenshot%20from%202019-10-28%2019-25-54.png)
 
 --------------------------------------------------------------------------------------------------------------
 - Doc [Read](https://github.com/nu11secur1ty/insmod_block/tree/master/nu11secur1ty-sec/Documentation/insmod_block)
