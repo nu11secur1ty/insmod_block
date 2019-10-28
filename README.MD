@@ -680,6 +680,13 @@ Public License instead of this License.  But first, please read
 ```
 ----------------------------------------------------------------------------------
 # nu11secur1ty-sec module is testing on:
+
+------------------------------------------------------------------------------------
+`OpenSUSE Leap 42.3` 4.4.180-102-default
+- IT works ;)
+
+-----------------------------------------------------------------------------------
+
 - Doc [Read](https://github.com/nu11secur1ty/insmod_block/tree/master/nu11secur1ty-sec/Documentation/insmod_block)
 
 `openSUSE Leap 15.1 - kernel 5.3.4` - It works
