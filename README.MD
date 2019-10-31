@@ -698,25 +698,28 @@ Public License instead of this License.  But first, please read
  ![](https://github.com/nu11secur1ty/Linux_hardening_and_security/blob/master/Kernel-sec-modules_by_nu11secur1ty/Modules/LSM/wall/Screenshot%20from%202019-10-10%2016-07-51.png)
 
 --------------------------------------------------------------------------------
-`openSUSE Leap 15.1` - `kernel 5.3.5` - It works
-
+`openSUSE Leap 15.1` - `kernel 5.3.5` 
+- It works
 --------------------------------------------------------------------------------
-`openSUSE Leap 15.1` - `kernel-5.3.5_nu11secur1ty-lp151.28.20-default` - It works
-
+`openSUSE Leap 15.1` - `kernel-5.3.5_nu11secur1ty-lp151.28.20-default` 
+- It works
 --------------------------------------------------------------------------------
-`openSUSE Leap 15.1` - `kerneldev 5.3.6_nu11secur1ty-lp151.28.20-default` - It works
+`openSUSE Leap 15.1` - `kerneldev 5.3.6_nu11secur1ty-lp151.28.20-default` 
+- It works
 ![](https://github.com/nu11secur1ty/Linux_hardening_and_security/blob/master/Kernel-sec-modules_by_nu11secur1ty/Modules/LSM/wall/Screenshot%20from%202019-10-13%2010-54-34.png)
 
-`openSUSE Leap 15.2` - `kerneldev 5.3.6_nu11secur1ty-lp151.28.20-default` - It works
-
+`openSUSE Leap 15.2` - `kerneldev 5.3.6_nu11secur1ty-lp151.28.20-default` 
+- It works
 ----------------------------------------------------------------------------------
 
-`openSUSE Leap 15.2` - `kerneldev 5.3.7_nu11secur1ty-lp151.28.20-default` - It works
+`openSUSE Leap 15.2` - `kerneldev 5.3.7_nu11secur1ty-lp151.28.20-default` 
+- It works
 ![](https://github.com/nu11secur1ty/insmod_block/blob/master/wall/Screenshot%20from%202019-10-18%2011-40-47.png)
 
 ----------------------------------------------------------------------------------
 
-`openSUSE Leap 15.2 Alpha` - `5.3.8_nu11secur1ty-lp151.28.20-default` - It works
+`openSUSE Leap 15.2 Alpha` - `5.3.8_nu11secur1ty-lp151.28.20-default`
+ - It works
 ![](https://github.com/nu11secur1ty/insmod_block/blob/master/wall/Screenshot%20from%202019-10-31%2016-46-55.png)
 
 ----------------------------------------------------------------------------------
