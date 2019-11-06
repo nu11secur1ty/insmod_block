@@ -65,22 +65,22 @@ because he is created without breaking the rule of the User and Kernel space!
 /path/to/compiled/linux-5.x.x/
 
 1. unpack a clean kernel source tree
-tar xvf linux-5.x.x.tar.xz
-cd linux-5.x.x/
+   tar xvf linux-5.x.x.tar.xz
+   cd linux-5.x.x/
 
 2.  copy you .config file to the directory
-cp /path/to/compiled/linux-5.x.x/.config .
+   cp /path/to/compiled/linux-5.x.x/.config .
 
 3.  run it and then delete .config file in source directory to get a clean kernel source
-make O=/usr/src/linux-headers-5.x.x oldconfig
-rm .config
+   make O=/usr/src/linux-headers-5.x.x oldconfig
+   rm .config
 
 4. run the modules_prepare make target
-make O=/usr/src/linux-headers-5.x.x modules_prepare
+   make O=/usr/src/linux-headers-5.x.x modules_prepare
 
 5.  delete useless things, and copy the necessary things
-rm /usr/src/linux-headers-5.x.x/source
-cp /path/to/compiled/linux-5.x.x/Module.symvers /usr/src/linux-headers-5.x.x
+   rm /usr/src/linux-headers-5.x.x/source
+   cp /path/to/compiled/linux-5.x.x/Module.symvers /usr/src/linux-headers-5.x.x
 
 -----------------------------------------------------------------------------------
 Now, the /usr/src/linux-headers-5.x.x directory is able to build the module.
