@@ -9,6 +9,7 @@ WARNING: The wifi will not woking after loading the patch because this module de
 wich loading with the Kernel. ATTENTION: This module is not created for users Desktops and whatever!
 NOTE: This module is recommended for SERVERS which using special data that you want to protect!
 ---------------------------------------------------------------------------
+
 # Installing and deploying with new kernel headers.
 
 1. Copy all content from nu11secur1ty-sec to your Kernel tree into the security directory!
