@@ -7,6 +7,10 @@ The architecture of this module is strong and useful,
 because he is created without breaking the rule of the User and Kernel space!
 WARNING: The wifi will not woking after loading the patch because this module depends on the LKM module 
 wich loading with the Kernel. ATTENTION: This module is not created for users Desktops and whatever!
+
+Edit: November 18 2019-Wifi is modified to work if someone wants to use this module without wifi
+modules please contact me. ;) BR
+
 NOTE: This module is recommended for SERVERS which using special data that you want to protect!
 ---------------------------------------------------------------------------
 
