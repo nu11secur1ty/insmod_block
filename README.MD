@@ -723,6 +723,14 @@ Public License instead of this License.  But first, please read
 ![](https://github.com/nu11secur1ty/insmod_block/blob/master/wall/Screenshot%20from%202019-10-31%2016-46-55.png)
 
 ----------------------------------------------------------------------------------
+
+`Linux kerneldev 5.4.1_nu11secur1ty-lp151.28.32-default`
+- It works
+![](https://github.com/nu11secur1ty/insmod_block/blob/master/wall/5.4.1.png)
+
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 - Source tree:
 
 [Source](https://github.com/nu11secur1ty/linux-5.x.x-nu11secur1ty)
