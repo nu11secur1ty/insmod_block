@@ -1,6 +1,6 @@
 # Usage
 - - - - - Compiling
 ```bash
-gcc -s -o insmod_block
+gcc -s insmod_block.c -o insmod_block
 ```
 
